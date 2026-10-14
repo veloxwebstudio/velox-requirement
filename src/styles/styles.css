@@ -164,20 +164,7 @@ button {  cursor:pointer
   right:14%;
   top:-25px
 }
-.hero-stamp {  position:absolute;
-  right:19%;
-  top:95px;
-  width:90px;
-  height:90px;
-  border:1px solid rgba(199,243,107,.55);
-  border-radius:50%;
-  display:grid;
-  place-content:center;
-  text-align:center;
-  font:800 37px Manrope;
-  color:var(--lime);
-  transform:rotate(12deg)
-}
+
 .hero-stamp small {  font:700 7px "DM Sans";
   letter-spacing:2px
 }
