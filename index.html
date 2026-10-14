@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="Tell VeloxWebStudio about your business and website project.">
+  <title>Website Project Requirements — VeloxWebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/styles.css">
+  <script defer src="src/scripts/app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="VeloxWebStudio home"><span class="brand-mark">V</span><span>Velox<span class="brand-light">WebStudio</span></span></a>
+      <div class="topbar-right"><span class="secure-note"><span class="secure-dot"></span> Project intake</span><span class="topbar-divider"></span><span class="step-small" id="topStep">Step 1 of 7</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="eyebrow-line"></span> LET'S BUILD SOMETHING GOOD</div>
+        <h1>Tell us about<br>your <span>business.</span></h1>
+        <p>Share your company details, business story and recent projects so we can build a website that fits your business.</p>
+        <div class="hero-meta"><span><span class="meta-icon">◷</span> About 8–12 minutes</span><span><span class="meta-icon">↗</span> Your details stay private</span></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-stamp">V<br><small>STUDIO</small></div>
+      </section>
+
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Form sections">
+          <p class="side-label">YOUR PROJECT</p>
+          <nav id="sectionNav">
+            <button class="nav-step active" type="button" data-step="0"><span class="nav-number">01</span><span><strong>Client & company</strong><small>Contact and business details</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="1"><span class="nav-number">02</span><span><strong>About your company</strong><small>Your story and strengths</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="2"><span class="nav-number">03</span><span><strong>Recent projects</strong><small>Portfolio and images</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="3"><span class="nav-number">04</span><span><strong>Website requirements</strong><small>Pages and functionality</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="4"><span class="nav-number">05</span><span><strong>Design preferences</strong><small>Style, domain and content</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="5"><span class="nav-number">06</span><span><strong>Budget & timeline</strong><small>Investment and schedule</small></span><span class="nav-check">✓</span></button>
+            <button class="nav-step" type="button" data-step="6"><span class="nav-number">07</span><span><strong>Review & submit</strong><small>Check everything once</small></span><span class="nav-check">✓</span></button>
+          </nav>
+          <div class="sidebar-help"><span class="help-icon">?</span><div><strong>Need a hand?</strong><p>Leave a question in the additional notes and we'll follow up with you.</p></div></div>
+        </aside>
+
+        <section class="form-panel">
+          <div class="progress-wrap"><div class="progress-label"><span id="progressTitle">01 / CLIENT & COMPANY DETAILS</span><span id="progressPercent">14% complete</span></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+          <form id="requirementsForm" novalidate>
+            <section class="form-step active" data-panel="0">
+              <div class="section-heading"><span class="section-kicker">01 — THE BASICS</span><h2>Client & company details</h2><p>First, let's get to know the business and the best way to reach you.</p></div>
+              <div class="field-grid">
+                <label class="field full"><span>Company or brand name <b>*</b></span><input name="company_name" required placeholder="e.g. Greenway Landscapes"><small class="error"></small></label>
+                <label class="field"><span>Business type <b>*</b></span><select name="business_type" required><option value="">Select a business type</option><option>Construction</option><option>Groundworks</option><option>Landscaping</option><option>Roofing</option><option>Cleaning</option><option>Restaurant or Cafe</option><option>Hotel or Accommodation</option><option>E-commerce or Retail</option><option>Real Estate</option><option>Professional Services</option><option>Other</option></select><small class="error"></small></label>
+                <label class="field"><span>Contact person's full name <b>*</b></span><input name="contact_name" required placeholder="Your full name"><small class="error"></small></label>
+                <label class="field"><span>Business email <b>*</b></span><input name="email" type="email" required placeholder="you@company.com"><small class="error"></small></label>
+                <label class="field"><span>Phone number</span><input name="phone" type="tel" placeholder="+44 7000 000000"></label>
+                <label class="field"><span>WhatsApp number</span><input name="whatsapp" type="tel" placeholder="+44 7000 000000"></label>
+                <label class="field"><span>Country</span><input name="country" placeholder="Country"></label>
+                <label class="field"><span>City or business location</span><input name="city" placeholder="City / region"></label>
+                <label class="field full"><span>Full business address</span><input name="address" placeholder="Street, city, postal code (optional)"></label>
+                <label class="field"><span>Existing website URL</span><input name="website_url" type="url" placeholder="https://"></label>
+                <label class="field"><span>Instagram URL</span><input name="instagram_url" type="url" placeholder="https://instagram.com/"></label>
+                <label class="field"><span>Facebook URL</span><input name="facebook_url" type="url" placeholder="https://facebook.com/"></label>
+                <label class="field"><span>LinkedIn URL</span><input name="linkedin_url" type="url" placeholder="https://linkedin.com/"></label>
+                <label class="field full"><span>Other social media links</span><textarea name="other_social" rows="2" placeholder="Paste any other social links"></textarea></label>
+                <div class="field full"><span class="field-label">Company logo <em>Optional</em></span><label class="upload-zone compact" for="logoUpload"><span class="upload-symbol">↑</span><span><strong>Choose a logo file</strong><small>PNG, JPG, JPEG, SVG or WEBP · up to 5 MB</small></span><input id="logoUpload" name="logo" type="file" accept=".png,.jpg,.jpeg,.svg,.webp,image/png,image/jpeg,image/svg+xml,image/webp"></label><div id="logoPreview" class="file-preview-list"></div></div>
+              </div>
+            </section>
+
+            <section class="form-step" data-panel="1">
+              <div class="section-heading"><span class="section-kicker">02 — YOUR STORY</span><h2>About your company</h2><p>Help us understand what makes your business special. You can refine this content later.</p></div>
+              <div class="field-grid">
+                <label class="field full"><span>About us description <b>*</b></span><textarea name="about_description" required rows="5" placeholder="Tell us when your company started, what services you provide, your experience, who your customers are, and what makes your company special."></textarea><small class="error"></small></label>
+                <label class="field"><span>Company founding year</span><input name="founding_year" type="number" min="1800" max="2100" placeholder="e.g. 2018"></label>
+                <label class="field"><span>Years of experience</span><input name="experience" type="number" min="0" max="200" placeholder="e.g. 12"></label>
+                <label class="field full"><span>What makes your company different?</span><textarea name="differentiators" rows="3" placeholder="What do customers choose you for?"></textarea></label>
+                <label class="field"><span>Certifications or qualifications</span><textarea name="certifications" rows="3" placeholder="Relevant qualifications"></textarea></label>
+                <label class="field"><span>Awards or achievements</span><textarea name="achievements" rows="3" placeholder="Awards, milestones, recognition"></textarea></label>
+                <label class="field full"><span>Service areas</span><input name="service_areas" placeholder="Towns, cities or regions you serve"></label>
+                <div class="field full"><span class="field-label">Team or workplace photos <em>Optional</em></span><label class="upload-zone" for="teamUpload"><span class="upload-symbol">↑</span><span><strong>Upload team or workplace images</strong><small>JPG, PNG or WEBP · up to 8 MB per image · multiple files allowed</small></span><input id="teamUpload" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div id="teamPreview" class="file-preview-list"></div></div>
+              </div>
+            </section>
+
+            <section class="form-step" data-panel="2">
+              <div class="section-heading"><span class="section-kicker">03 — SHOW YOUR WORK</span><h2>Recent projects</h2><p>Share projects you'd like to feature. Add as many project entries as you need.</p></div>
+              <div id="projectsContainer"></div>
+              <button class="btn btn-outline add-project" id="addProject" type="button"><span>＋</span> Add another project</button>
+              <p class="microcopy">Images are previewed locally in this demo. They are not uploaded to a server.</p>
+            </section>
+
+            <section class="form-step" data-panel="3">
+              <div class="section-heading"><span class="section-kicker">04 — WHAT YOU NEED</span><h2>Website requirements</h2><p>Select the pages and features that would make your website work best.</p></div>
+              <div class="field-grid">
+                <fieldset class="choice-group full"><legend>What type of project is this? <b>*</b></legend><div class="choice-cards three"><label class="choice-card"><input type="radio" name="website_type" value="New website" required><span class="choice-mark"></span><strong>New website</strong><small>Build from scratch</small></label><label class="choice-card"><input type="radio" name="website_type" value="Website redesign"><span class="choice-mark"></span><strong>Redesign</strong><small>Refresh an existing site</small></label><label class="choice-card"><input type="radio" name="website_type" value="Existing website improvements"><span class="choice-mark"></span><strong>Improvements</strong><small>Update selected parts</small></label></div><small class="error"></small></fieldset>
+                <fieldset class="choice-group full"><legend>Which pages do you need?</legend><div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="pages" value="Home">Home</label><label class="check-option"><input type="checkbox" name="pages" value="About Us">About Us</label><label class="check-option"><input type="checkbox" name="pages" value="Services">Services</label><label class="check-option"><input type="checkbox" name="pages" value="Portfolio or Projects">Portfolio / Projects</label><label class="check-option"><input type="checkbox" name="pages" value="Gallery">Gallery</label><label class="check-option"><input type="checkbox" name="pages" value="Testimonials">Testimonials</label><label class="check-option"><input type="checkbox" name="pages" value="Contact">Contact</label><label class="check-option"><input type="checkbox" name="pages" value="Request a Quote">Request a Quote</label><label class="check-option"><input type="checkbox" name="pages" value="Booking">Booking</label><label class="check-option"><input type="checkbox" name="pages" value="Shop or Products">Shop / Products</label><label class="check-option"><input type="checkbox" name="pages" value="Blog">Blog</label><label class="check-option"><input type="checkbox" name="pages" value="FAQ">FAQ</label><label class="check-option"><input type="checkbox" name="pages" value="Other">Other</label>
+                </div></fieldset>
+                <fieldset class="choice-group full"><legend>Home page sections</legend><div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="home_sections" value="Hero section">Hero section</label><label class="check-option"><input type="checkbox" name="home_sections" value="Company introduction">Company introduction</label><label class="check-option"><input type="checkbox" name="home_sections" value="Featured projects">Featured projects</label><label class="check-option"><input type="checkbox" name="home_sections" value="Services overview">Services overview</label><label class="check-option"><input type="checkbox" name="home_sections" value="Why choose us">Why choose us</label><label class="check-option"><input type="checkbox" name="home_sections" value="Customer testimonials">Customer testimonials</label><label class="check-option"><input type="checkbox" name="home_sections" value="Statistics and achievements">Statistics / achievements</label><label class="check-option"><input type="checkbox" name="home_sections" value="Service areas">Service areas</label><label class="check-option"><input type="checkbox" name="home_sections" value="Image gallery">Image gallery</label><label class="check-option"><input type="checkbox" name="home_sections" value="Contact section">Contact section</label><label class="check-option"><input type="checkbox" name="home_sections" value="Quote request button">Quote request button</label><label class="check-option"><input type="checkbox" name="home_sections" value="WhatsApp button">WhatsApp button</label>
+                </div></fieldset>
+                <fieldset class="choice-group full"><legend>About page sections</legend><div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="about_sections" value="Company history">Company history</label><label class="check-option"><input type="checkbox" name="about_sections" value="Mission and values">Mission and values</label><label class="check-option"><input type="checkbox" name="about_sections" value="Team profiles">Team profiles</label><label class="check-option"><input type="checkbox" name="about_sections" value="Experience and expertise">Experience and expertise</label><label class="check-option"><input type="checkbox" name="about_sections" value="Certifications">Certifications</label><label class="check-option"><input type="checkbox" name="about_sections" value="Awards">Awards</label><label class="check-option"><input type="checkbox" name="about_sections" value="Why choose us">Why choose us</label><label class="check-option"><input type="checkbox" name="about_sections" value="Team photographs">Team photographs</label>
+                </div></fieldset>
+                <fieldset class="choice-group full"><legend>Portfolio page sections</legend><div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="portfolio_sections" value="Project gallery">Project gallery</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Project descriptions">Project descriptions</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Project categories">Project categories</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Before-and-after images">Before-and-after images</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Project locations">Project locations</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Completion dates">Completion dates</label><label class="check-option"><input type="checkbox" name="portfolio_sections" value="Customer testimonials">Customer testimonials</label>
+                </div></fieldset>
+                <fieldset class="choice-group full"><legend>Additional features</legend><div class="check-grid">
+                  <label class="check-option"><input type="checkbox" name="features" value="Responsive design">Responsive design</label><label class="check-option"><input type="checkbox" name="features" value="Contact form">Contact form</label><label class="check-option"><input type="checkbox" name="features" value="Quote request form">Quote request form</label><label class="check-option"><input type="checkbox" name="features" value="WhatsApp integration">WhatsApp integration</label><label class="check-option"><input type="checkbox" name="features" value="Google Maps">Google Maps</label><label class="check-option"><input type="checkbox" name="features" value="Booking system">Booking system</label><label class="check-option"><input type="checkbox" name="features" value="Online payments">Online payments</label><label class="check-option"><input type="checkbox" name="features" value="E-commerce">E-commerce</label><label class="check-option"><input type="checkbox" name="features" value="Admin dashboard">Admin dashboard</label><label class="check-option"><input type="checkbox" name="features" value="Database integration">Database integration</label><label class="check-option"><input type="checkbox" name="features" value="Customer login">Customer login</label><label class="check-option"><input type="checkbox" name="features" value="Search functionality">Search functionality</label><label class="check-option"><input type="checkbox" name="features" value="Blog management">Blog management</label><label class="check-option"><input type="checkbox" name="features" value="SEO setup">SEO setup</label><label class="check-option"><input type="checkbox" name="features" value="Animations">Animations</label><label class="check-option"><input type="checkbox" name="features" value="Dark mode">Dark mode</label><label class="check-option"><input type="checkbox" name="features" value="Other custom features">Other custom features</label>
+                </div></fieldset>
+                <div class="conditional-box full" id="ecommerceQuestions" hidden><h3>🛍 E-commerce details</h3><div class="field-grid"><label class="field"><span>Approximate number of products</span><input name="product_count" type="number" min="1" placeholder="e.g. 50"></label><label class="field"><span>Product categories</span><input name="product_categories" placeholder="e.g. Clothing, accessories"></label><label class="field full"><span>Payment requirements</span><textarea name="payment_requirements" rows="2" placeholder="Payment methods or providers you'd like to use"></textarea></label></div></div>
+                <div class="conditional-box full" id="bookingQuestions" hidden><h3>📅 Booking details</h3><div class="field-grid"><label class="field"><span>Booking type</span><input name="booking_type" placeholder="e.g. appointments, rooms, services"></label><label class="field"><span>Preferred booking functionality</span><input name="booking_functionality" placeholder="e.g. calendar, reminders"></label></div></div>
+                <label class="field full"><span>Other pages or features</span><textarea name="other_features" rows="3" placeholder="Anything else you need the website to do?"></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-step" data-panel="4">
+              <div class="section-heading"><span class="section-kicker">05 — THE LOOK & FEEL</span><h2>Design preferences</h2><p>Tell us what your brand should feel like and share examples that inspire you.</p></div>
+              <div class="field-grid">
+                <label class="field full"><span>Preferred brand colours</span><input name="brand_colours" placeholder="e.g. Forest green, cream and warm gold"></label>
+                <fieldset class="choice-group full"><legend>Preferred website style</legend><div class="style-options">
+                  <label class="style-option"><input type="radio" name="website_style" value="Minimal and clean"><span class="style-swatch minimal"></span><strong>Minimal & clean</strong></label>
+                  <label class="style-option"><input type="radio" name="website_style" value="Bold and modern"><span class="style-swatch bold"></span><strong>Bold & modern</strong></label>
+                  <label class="style-option"><input type="radio" name="website_style" value="Elegant and premium"><span class="style-swatch elegant"></span><strong>Elegant & premium</strong></label>
+                  <label class="style-option"><input type="radio" name="website_style" value="Friendly and playful"><span class="style-swatch friendly"></span><strong>Friendly & playful</strong></label>
+                </div></fieldset>
+                <label class="field full"><span>Reference website URLs</span><textarea name="reference_urls" rows="3" placeholder="Paste website links, one per line"></textarea></label>
+                <label class="field full"><span>What do you like about these websites?</span><textarea name="liked_websites" rows="3" placeholder="Layouts, colours, animations, navigation, or anything else"></textarea></label>
+                <label class="field"><span>Existing domain name</span><input name="domain_name" placeholder="e.g. yourcompany.com"></label>
+                <label class="field"><span>Hosting status</span><select name="hosting_status"><option value="">Select an option</option><option>Already have hosting</option><option>Need hosting advice</option><option>Need hosting setup</option><option>Not sure</option></select></label>
+                <label class="field"><span>Is website content ready?</span><select name="content_status"><option value="">Select an option</option><option>All content is ready</option><option>Some content is ready</option><option>Need help writing content</option></select></label>
+                <label class="field"><span>Are company images ready?</span><select name="images_status"><option value="">Select an option</option><option>Yes, all images are ready</option><option>Some images are ready</option><option>Need help sourcing images</option></select></label>
+                <label class="field full"><span>Describe your preferred design</span><textarea name="design_description" rows="4" placeholder="What should visitors feel when they land on your website?"></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-step" data-panel="5">
+              <div class="section-heading"><span class="section-kicker">06 — PLANNING AHEAD</span><h2>Budget & timeline</h2><p>A realistic budget and timeline help us recommend the right approach for your project.</p></div>
+              <div class="field-grid">
+                <label class="field"><span>Custom budget amount <b>*</b></span><input name="budget_amount" type="number" min="0" step="0.01" required placeholder="Enter your budget"><small class="error"></small></label>
+                <label class="field"><span>Currency <b>*</b></span><select name="currency" id="currencySelect" required><option value="">Choose currency</option><option value="GBP">GBP — British Pound (United Kingdom)</option><option value="USD">USD — US Dollar</option><option value="EUR">EUR — Euro (France and Eurozone)</option><option value="LKR">LKR — Sri Lankan Rupee</option><option value="INR">INR — Indian Rupee</option><option value="CAD">CAD — Canadian Dollar</option><option value="AUD">AUD — Australian Dollar</option><option value="AED">AED — UAE Dirham (United Arab Emirates)</option><option value="OMR">OMR — Omani Rial (Oman)</option><option value="SAR">SAR — Saudi Riyal</option><option value="QAR">QAR — Qatari Riyal</option><option value="KWD">KWD — Kuwaiti Dinar</option><option value="BHD">BHD — Bahraini Dinar</option><option value="SGD">SGD — Singapore Dollar</option><option value="MYR">MYR — Malaysian Ringgit</option><option value="NZD">NZD — New Zealand Dollar</option><option value="ZAR">ZAR — South African Rand</option><option value="JPY">JPY — Japanese Yen</option><option value="CHF">CHF — Swiss Franc</option><option value="Other">Other</option></select><small class="error"></small></label>
+                <label class="field full" id="otherCurrencyField" hidden><span>Enter currency</span><input name="other_currency" placeholder="Currency name or code"></label>
+                <label class="field full"><span>Additional timeline or budget notes</span><textarea name="budget_notes" rows="4" placeholder="Any important deadlines, dependencies or budget details"></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-step" data-panel="6">
+              <div class="section-heading"><span class="section-kicker">07 — ALMOST THERE</span><h2>Review your project</h2><p>Check the information below before sending it to VeloxWebStudio.</p></div>
+              <div id="reviewContent" class="review-content"></div>
+              <div class="field-grid review-contact">
+                <label class="field full"><span>Additional requirements or special instructions</span><textarea name="additional_requirements" rows="3" placeholder="Anything else we should know?"></textarea></label>
+                <label class="consent full"><input type="checkbox" name="consent" required><span>I agree that the information I provide may be used by VeloxWebStudio to discuss and deliver this website project. <b>*</b><small class="error"></small></span></label>
+              </div>
+              <div class="demo-notice"><strong>Privacy note</strong><p>Your project details and uploaded files will be sent securely for review when the website is configured with its backend.</p></div>
+              <div id="submitMessage" class="submit-message" role="status" aria-live="polite" hidden></div>
+            </section>
+          </form>
+          <div class="form-footer"><span class="required-note"><b>*</b> Required fields</span><div class="footer-actions"><button class="btn btn-ghost" id="prevBtn" type="button" disabled>← Previous</button><button class="btn btn-primary" id="nextBtn" type="button">Continue <span>→</span></button><button class="btn btn-primary" id="submitBtn" type="button" hidden>Submit requirements <span>↗</span></button></div></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">V</span><span>Velox<span class="brand-light">WebStudio</span></span></a><span>Thoughtful websites. Built around your business.</span><span><a href="/admin.html" style="color:inherit;text-decoration:none">Admin</a> · © <span id="year"></span> VeloxWebStudio</span></footer>
+  </div>
+  <template id="projectTemplate">
+    <article class="project-card">
+      <div class="project-card-head"><div><span class="project-index">PROJECT 01</span><h3>Project details</h3></div><button class="remove-project" type="button" aria-label="Remove project">Remove ×</button></div>
+      <div class="field-grid">
+        <label class="field"><span>Project name <b>*</b></span><input data-key="project_name" required placeholder="e.g. Riverside Garden Renovation"><small class="error"></small></label>
+        <label class="field"><span>Project category or type</span><input data-key="project_type" placeholder="e.g. Landscaping"></label>
+        <label class="field full"><span>Project description <b>*</b></span><textarea data-key="description" required rows="3" placeholder="What did you do and what was the goal?"></textarea><small class="error"></small></label>
+        <label class="field"><span>Project location</span><input data-key="location" placeholder="Town or region"></label>
+        <label class="field"><span>Completion date</span><input data-key="completion_date" type="date"></label>
+        <label class="field full"><span>Project outcome or results</span><textarea data-key="outcome" rows="2" placeholder="Results, impact or client feedback"></textarea></label>
+        <label class="field full"><span>Project reference URL</span><input data-key="reference_url" type="url" placeholder="https:// (optional)"></label>
+        <div class="field full"><span class="field-label">Project images <em>Optional</em></span><label class="upload-zone" data-upload-label><span class="upload-symbol">↑</span><span><strong>Choose project images</strong><small>JPG, PNG or WEBP · up to 8 MB each · multiple files</small></span><input data-key="images" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div class="file-preview-list" data-preview></div></div>
+        <div class="field full"><span class="field-label">Before images <em>Optional</em></span><label class="upload-zone compact"><span class="upload-symbol">↑</span><span><strong>Choose before images</strong><small>JPG, PNG or WEBP · up to 8 MB each</small></span><input data-key="before_images" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div class="file-preview-list" data-preview-before></div></div>
+        <div class="field full"><span class="field-label">After images <em>Optional</em></span><label class="upload-zone compact"><span class="upload-symbol">↑</span><span><strong>Choose after images</strong><small>JPG, PNG or WEBP · up to 8 MB each</small></span><input data-key="after_images" type="file" accept="image/jpeg,image/png,image/webp" multiple></label><div class="file-preview-list" data-preview-after></div></div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

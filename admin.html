@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard — VeloxWebStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="src/scripts/config.js"></script><script defer src="src/scripts/admin.js"></script>
+</head>
+<body>
+  <header class="admin-header"><a href="/" class="brand"><span class="mark">V</span>VeloxWebStudio <span class="muted">/ Admin</span></a><button id="logoutBtn" class="btn secondary" hidden>Sign out</button></header>
+  <main class="admin-main">
+    <section class="login-card" id="loginCard">
+      <span class="kicker">PRIVATE WORKSPACE</span><h1>Welcome back.</h1><p>Sign in with an authorized admin account to review client enquiries.</p>
+      <form id="loginForm"><label>Email<input type="email" name="email" required autocomplete="username" placeholder="admin@yourdomain.com"></label><label>Password<input type="password" name="password" required autocomplete="current-password" placeholder="Your password"></label><button class="btn primary" type="submit">Sign in →</button><p class="message" id="loginMessage" role="status"></p></form>
+      <p class="hint">Admin accounts must be created in Supabase Authentication and added to the <code>admin_users</code> table by the project owner.</p>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="dash-title"><div><span class="kicker">CLIENT PIPELINE</span><h1>Project enquiries</h1><p>Review submissions, inspect project details and update enquiry status.</p></div><button id="refreshBtn" class="btn secondary">↻ Refresh</button></div>
+      <div class="toolbar"><input id="searchInput" type="search" placeholder="Search company or email…"><select id="typeFilter"><option value="">All business types</option></select><select id="statusFilter"><option value="">All statuses</option><option>New</option><option>Reviewing</option><option>Contacted</option><option>Quoted</option><option>In Progress</option><option>Completed</option><option>Rejected</option></select></div>
+      <p class="message" id="dashboardMessage" role="status"></p>
+      <div class="dashboard-grid"><section class="enquiry-list" id="enquiryList"><div class="empty">Loading enquiries…</div></section><section class="detail-panel" id="detailPanel"><div class="empty">Select an enquiry to view details.</div></section></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "veloxwebstudio-requirements",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Client website requirements form with Supabase storage/database and a protected admin dashboard.",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "formidable": "^3.5.4"
+  }
+}
