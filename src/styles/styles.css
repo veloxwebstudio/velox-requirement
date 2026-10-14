@@ -943,7 +943,49 @@ button {  cursor:pointer
   }
   .file-chip {    width:100%
   }
-  
+  .footer-brand-logo {
+  width: 100px;
+  height: 36px;
+}
+
+/* Logo inside the circular hero stamp */
+.hero-stamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.hero-stamp-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 82px;
+    height: 32px;
+  }
+
+  .footer-brand-logo {
+    width: 82px;
+    height: 30px;
+  }
+
+  .hero-stamp {
+    width: 65px;
+    height: 65px;
+    padding: 7px;
+  }
+}
+
+
+
+Important: logo.jpg-ai GitHub-la
 }
 @media(prefers-reduced-motion:reduce) {  *,*::before,*::after {    scroll-behavior:auto!important;
     animation-duration:.01ms!important;
