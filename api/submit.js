@@ -217,6 +217,9 @@ module.exports = async function handler(req, res) {
     return reply(res, 201, { ok: true, reference: clientId.slice(0, 8).toUpperCase() });
   } catch (error) {
     // Best-effort compensation cleanup for any files already uploaded.
+       console.error("[api/submit] Submission failed:", error);
+   
+    
     if (uploadedPaths.length) {
       try { await supabase.storage.from(BUCKET).remove(uploadedPaths); } catch {}
     }
