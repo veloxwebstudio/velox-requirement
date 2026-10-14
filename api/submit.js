@@ -1,4 +1,11 @@
-const formidable = require("formidable");
+const formidableLib = require("formidable");
+
+const createForm =
+  typeof formidableLib === "function"
+    ? formidableLib
+    : typeof formidableLib.formidable === "function"
+      ? formidableLib.formidable
+      : formidableLib.default;
 const crypto = require("crypto");
 const { createClient } = require("@supabase/supabase-js");
 
@@ -17,7 +24,7 @@ function safeName(name) {
   return String(name || "upload").normalize("NFKD").replace(/[^a-zA-Z0-9._-]/g, "_").slice(-100) || "upload";
 }
 function parseForm(req) {
-  const form = formidable({
+  const form = createForm({
     multiples: true,
     maxFileSize: MAX_FILE_BYTES,
     maxTotalFileSize: 40 * 1024 * 1024,
