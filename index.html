@@ -10,16 +10,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/styles/styles.css">
+  <style>
+    .brand-logo{display:block;width:100px;height:38px;object-fit:contain;object-position:left center}
+    .footer-brand-logo{width:90px;height:34px}
+    .hero{position:relative;overflow:hidden}
+    .hero-orbit{z-index:0}
+    .hero-stamp{position:absolute;right:19%;top:95px;width:90px;height:90px;padding:10px;border:1px solid rgba(199,243,107,.55);border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(12deg);z-index:2}
+    .hero-stamp-logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%}
+    @media(max-width:720px){.brand-logo{width:82px;height:32px}.footer-brand-logo{width:78px;height:30px}.hero-stamp{width:58px;height:58px;right:22px;top:28px;padding:6px}}
+  </style>
   <script defer src="src/scripts/app.js"></script>
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
-     
-<a class="brand" href="/" aria-label="VeloxWebStudio home"> Veloxwebstudio
-  <img src="/assets/logo.jpg" alt="VeloxWebStudio" class="brand-logo">
-</a>
-
+      <a class="brand" href="/" aria-label="VeloxWebStudio home"><img src="/assets/logo.jpg" alt="VeloxWebStudio" class="brand-logo"></a>
       <div class="topbar-right"><span class="secure-note"><span class="secure-dot"></span> Project intake</span><span class="topbar-divider"></span><span class="step-small" id="topStep">Step 1 of 7</span></div>
     </header>
 
@@ -29,20 +34,7 @@
         <h1>Tell us about<br>your <span>business.</span></h1>
         <p>Share your company details, business story and recent projects so we can build a website that fits your business.</p>
         <div class="hero-meta"><span><span class="meta-icon">◷</span> About 8–12 minutes</span><span><span class="meta-icon">↗</span> Your details stay private</span></div>
-        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-
-<div class="hero-orbit orbit-one"></div>
-<div class="hero-orbit orbit-two"></div>
-
-<div class="hero-stamp">
-  <img
-    src="/assets/logo.jpg"
-    alt="VeloxWebStudio logo"
-    class="hero-stamp-logo"
-  >
-</div>
-
-
+        <div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div><div class="hero-stamp"><img src="/assets/logo.jpg" alt="VeloxWebStudio logo" class="hero-stamp-logo"></div>
       </section>
 
       <div class="workspace">
@@ -175,14 +167,7 @@
         </section>
       </div>
     </main>
-    <footer class="site-footer"><a class="brand footer-brand" href="#"><a class="brand footer-brand" href="/" aria-label="VeloxWebStudio home">
-  
-</a><span>Velox<span class="brand-light">WebStudio</span> <img
-    src="/assets/logo.jpg"
-    alt="VeloxWebStudio"
-    class="brand-logo footer-brand-logo"
-  >
-</a></span></a><span>Thoughtful websites. Built around your business.</span><span><a href="/admin.html" style="color:inherit;text-decoration:none">Admin</a> · © <span id="year"></span> VeloxWebStudio</span></footer>
+    <footer class="site-footer"><a class="brand footer-brand" href="/" aria-label="VeloxWebStudio home"><img src="/assets/logo.jpg" alt="VeloxWebStudio" class="brand-logo footer-brand-logo"></a><span>Thoughtful websites. Built around your business.</span><span><a href="/admin.html" style="color:inherit;text-decoration:none">Admin</a> · © <span id="year"></span> VeloxWebStudio</span></footer>
   </div>
   <template id="projectTemplate">
     <article class="project-card">
