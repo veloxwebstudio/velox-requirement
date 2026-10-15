@@ -171,9 +171,9 @@ module.exports = async function handler(req, res) {
         liked_websites: data.liked_websites || "",
         design_description: data.design_description || "",
         domain_name: data.domain_name || "",
-        hosting_status: data.hosting_status || "",
-        content_status: data.content_status || "",
-        images_status: data.images_status || "",
+        
+        
+        
         other_features: data.other_features || "",
         product_count: data.product_count || "",
         product_categories: data.product_categories || "",
