@@ -1099,19 +1099,7 @@
       cleanFields(client)
     );
 
-    // Requirements are shown as named sections; no Raw Answers section.
-    state.requirements.forEach((requirement, index) => {
-      addDetailSection(
-        container,
-        state.requirements.length > 1
-          ? `Website Requirements ${index + 1}`
-          : "Website Requirements",
-        cleanFields(requirement)
-      );
-    });
-
-    renderDesignPreferences(container);
-
+   
     // Each project and its images stay in the same box.
     await renderProjects(container);
 
