@@ -135,31 +135,90 @@
       block.append(extra);projectBox.append(block);
     });
     addSection(detail,"Recent projects",projectBox);
-    const fileBox=node("div");
-    const relatedProjectIds=projectRows.map(p=>p.id);
-    const relatedFiles=[
-      ...clientFiles.filter(f=>f.client_id===id).map(f=>({...f,display_type:"Company logo"})),
-      ...teamImages.filter(f=>f.client_id===id).map(f=>({...f,display_type:"Team/workplace photo"})),
-      ...projectImages.filter(f=>f.client_id===id && relatedProjectIds.includes(f.project_id)).map(f=>({...f,display_type:`Project ${f.image_type} image`}))
-    ];
-    if(!relatedFiles.length) fileBox.append(node("p","","No uploaded files."));
-    else {
-      const links=node("div","image-links");
-      relatedFiles.forEach(file=>{
-        const button=node("button","",`${file.display_type}: ${file.original_filename}`);
-        button.type="button";
-        button.addEventListener("click",async()=>{
-          button.disabled=true;button.textContent="Creating secure link…";
-          const {data,error}=await supabase.storage.from("client-uploads").createSignedUrl(file.storage_path,60);
-          button.disabled=false;button.textContent=`${file.display_type}: ${file.original_filename}`;
-          if(error) setMessage(dashboardMessage,"Could not create secure image link: "+error.message,true);
-          else window.open(data.signedUrl,"_blank","noopener,noreferrer");
-        });
-        links.append(button);
-      });
-      fileBox.append(links);
+   
+    // Show company logo, team images and project images separately
+    const fileBox = node("div");
+    const relatedProjectIds = projectRows.map(p => p.id);
+
+    const logoFiles = clientFiles.filter(
+      f => f.client_id === id &&
+           (f.image_type === "logo" || f.storage_path?.includes("/logo/"))
+    );
+
+    const teamFiles = teamImages.filter(f => f.client_id === id);
+
+    const projectFileGroups = projectRows.map((project, index) => ({
+      project,
+      title: `Project ${index + 1}: ${project.project_name || "Untitled project"}`,
+      files: projectImages.filter(
+        f => f.client_id === id && f.project_id === project.id
+      )
+    }));
+
+    async function renderImageGroup(parent, title, files) {
+      const group = node("div");
+      group.style.marginBottom = "20px";
+      group.append(node("h4", "", title));
+
+      if (!files.length) {
+        group.append(node("p", "", "No images uploaded."));
+        parent.append(group);
+        return;
+      }
+
+      const imageGrid = node("div", "admin-image-grid");
+      imageGrid.style.display = "grid";
+      imageGrid.style.gridTemplateColumns = "repeat(auto-fill, minmax(130px, 1fr))";
+      imageGrid.style.gap = "12px";
+
+      for (const file of files) {
+        const card = node("div", "admin-image-card");
+        const img = document.createElement("img");
+        img.alt = file.original_filename || title;
+        img.loading = "lazy";
+        img.style.width = "100%";
+        img.style.height = "120px";
+        img.style.objectFit = "cover";
+        img.style.borderRadius = "10px";
+
+        const caption = node(
+          "small",
+          "",
+          `${file.image_type || "image"} · ${file.original_filename || ""}`
+        );
+
+        card.append(img, caption);
+        imageGrid.append(card);
+
+        const { data, error } = await supabase.storage
+          .from("client-uploads")
+          .createSignedUrl(file.storage_path, 60);
+
+        if (!error && data?.signedUrl) {
+          img.src = data.signedUrl;
+          img.style.cursor = "pointer";
+          img.addEventListener("click", () => {
+            window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+          });
+        } else {
+          img.alt = "Image preview unavailable";
+          caption.textContent = `${file.original_filename || "Image"} — preview unavailable`;
+        }
+      }
+
+      group.append(imageGrid);
+      parent.append(group);
     }
-    addSection(detail,"Private uploads",fileBox);
+
+    await renderImageGroup(fileBox, "Company Logo", logoFiles);
+    await renderImageGroup(fileBox, "Team / Workplace Images", teamFiles);
+
+    for (const group of projectFileGroups) {
+      await renderImageGroup(fileBox, group.title, group.files);
+    }
+
+    addSection(detail, "Client Images & Project Gallery", fileBox);
+
     const reqBox=node("div");
     [["Project type",req.website_type],["Pages",req.selected_pages],["Home sections",req.home_sections],["About sections",req.about_sections],["Portfolio sections",req.portfolio_sections],["Features",req.selected_features],["Budget",budgetLabel(req)],["Reference URLs",req.reference_urls],["Design preferences",req.design_preferences],["Additional notes",req.additional_notes]].forEach(([k,v])=>{
       const row=node("div");row.style.marginBottom="12px";row.append(node("small","",k),node("p","",value({v},"v")));reqBox.append(row);
